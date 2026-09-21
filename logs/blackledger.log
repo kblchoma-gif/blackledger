@@ -1,0 +1,118 @@
+2026-09-21 23:49:33 | INFO     | blackledger.main | Starting BLACKLEDGER …
+2026-09-21 23:53:45 | INFO     | blackledger.main | Starting BLACKLEDGER …
+2026-09-21 23:56:08 | INFO     | blackledger.main | Starting BLACKLEDGER …
+2026-09-21 23:56:08 | INFO     | database.db_manager | Database schema initialised at C:\Users\kblch\Desktop\blackledger\blackledger.db
+2026-09-21 23:56:08 | INFO     | blackledger.main | BLACKLEDGER ready.
+2026-09-21 23:56:23 | INFO     | core.data_loader | Loading CSV: C:\Users\kblch\Downloads\archive (3)\creditcard.csv
+2026-09-21 23:56:25 | INFO     | core.data_loader | Loaded shape=(284807, 31)
+2026-09-21 23:56:27 | INFO     | core.data_validator | Validation complete: 0 issues, 2 warnings
+2026-09-21 23:56:28 | INFO     | core.data_cleaner | Dropped 1081 duplicates
+2026-09-21 23:56:28 | INFO     | core.data_cleaner | Cleaning complete: (284807, 31) → (283726, 31)
+2026-09-21 23:56:28 | INFO     | controllers.app_controller | Cleaned shape: (283726, 31)
+2026-09-21 23:56:28 | INFO     | core.feature_engineer | Engineered 3 features: ['amount_log', 'amount_percentile', 'is_round_amount']
+2026-09-21 23:56:46 | INFO     | core.data_validator | Validation complete: 0 issues, 1 warnings
+2026-09-21 23:56:46 | INFO     | core.data_cleaner | Dropped 0 duplicates
+2026-09-21 23:56:46 | INFO     | core.data_cleaner | Cleaning complete: (5000, 10) → (5000, 10)
+2026-09-21 23:56:46 | INFO     | controllers.app_controller | Cleaned shape: (5000, 10)
+2026-09-21 23:56:46 | INFO     | core.feature_engineer | Engineered 14 features: ['amount_log', 'amount_percentile', 'is_round_amount', 'customer_amount_mean', 'customer_amount_std', 'customer_amount_max', 'amount_deviation', 'time_since_prev', 'tx_count_daily', 'tx_velocity_hourly', 'category_frequency', 'balance_delta_orig', 'balance_delta_dest', 'amount_to_balance']
+2026-09-21 23:57:40 | INFO     | core.imbalance_handler | Split: train=4000 test=1000
+2026-09-21 23:57:40 | INFO     | core.imbalance_handler | Resampled train: {0: 3946, 1: 54} → {0: 3946, 1: 3946}
+2026-09-21 23:57:40 | INFO     | core.model_trainer | Training Logistic Regression …
+2026-09-21 23:57:40 | INFO     | core.model_trainer | Saved Logistic Regression
+2026-09-21 23:57:40 | INFO     | core.model_trainer | Training Decision Tree …
+2026-09-21 23:57:41 | INFO     | core.model_trainer | Saved Decision Tree
+2026-09-21 23:57:41 | INFO     | core.model_trainer | Training Random Forest …
+2026-09-21 23:57:42 | INFO     | core.model_trainer | Saved Random Forest
+2026-09-21 23:57:42 | INFO     | core.model_trainer | Training Gradient Boosting …
+2026-09-21 23:57:49 | INFO     | core.model_trainer | Saved Gradient Boosting
+2026-09-21 23:57:49 | INFO     | core.model_evaluator | Logistic Regression — F1=0.0265 ROC-AUC=0.5016 PR-AUC=0.0155
+2026-09-21 23:57:49 | INFO     | core.model_evaluator | Decision Tree — F1=0.0000 ROC-AUC=0.4716 PR-AUC=0.0121
+2026-09-21 23:57:49 | INFO     | core.model_evaluator | Random Forest — F1=0.0426 ROC-AUC=0.4134 PR-AUC=0.0135
+2026-09-21 23:57:49 | INFO     | core.model_evaluator | Gradient Boosting — F1=0.0000 ROC-AUC=0.3385 PR-AUC=0.0115
+2026-09-21 23:59:40 | INFO     | blackledger.main | Starting BLACKLEDGER …
+2026-09-21 23:59:41 | WARNING  | database.db_manager | Legacy model_metrics schema detected (['id', 'model_name', 'precision', 'recall', 'f1', 'roc_auc', 'pr_auc', 'created_at']). Dropping and recreating with correct columns.
+2026-09-21 23:59:41 | INFO     | database.db_manager | Database schema initialised at C:\Users\kblch\Desktop\blackledger\blackledger.db
+2026-09-21 23:59:41 | INFO     | blackledger.main | BLACKLEDGER ready.
+2026-09-21 23:59:48 | INFO     | core.data_loader | Loading CSV: C:\Users\kblch\Downloads\archive (3)\creditcard.csv
+2026-09-21 23:59:50 | INFO     | core.data_loader | Loaded shape=(284807, 31)
+2026-09-21 23:59:52 | INFO     | core.data_validator | Validation complete: 0 issues, 2 warnings
+2026-09-21 23:59:53 | INFO     | core.data_cleaner | Dropped 1081 duplicates
+2026-09-21 23:59:53 | INFO     | core.data_cleaner | Cleaning complete: (284807, 31) → (283726, 31)
+2026-09-21 23:59:53 | INFO     | controllers.app_controller | Cleaned shape: (283726, 31)
+2026-09-21 23:59:53 | INFO     | core.feature_engineer | Engineered 3 features: ['amount_log', 'amount_percentile', 'is_round_amount']
+2026-09-22 00:00:53 | INFO     | core.imbalance_handler | Split: train=226980 test=56746
+2026-09-22 00:00:53 | INFO     | core.imbalance_handler | Resampled train: {0: 226602, 1: 378} → {0: 226602, 1: 226602}
+2026-09-22 00:00:53 | INFO     | core.model_trainer | Training Logistic Regression …
+2026-09-22 00:00:56 | INFO     | core.model_trainer | Saved Logistic Regression
+2026-09-22 00:00:56 | INFO     | core.model_trainer | Training Decision Tree …
+2026-09-22 00:01:12 | INFO     | core.model_trainer | Saved Decision Tree
+2026-09-22 00:01:12 | INFO     | core.model_trainer | Training Random Forest …
+2026-09-22 00:04:27 | INFO     | core.model_trainer | Saved Random Forest
+2026-09-22 00:04:27 | INFO     | core.model_trainer | Training Gradient Boosting …
+2026-09-22 00:31:11 | INFO     | core.model_trainer | Saved Gradient Boosting
+2026-09-22 00:31:11 | INFO     | core.model_evaluator | Logistic Regression — F1=0.2387 ROC-AUC=0.9576 PR-AUC=0.6908
+2026-09-22 00:31:11 | INFO     | core.model_evaluator | Decision Tree — F1=0.1548 ROC-AUC=0.9088 PR-AUC=0.4044
+2026-09-22 00:31:11 | INFO     | core.model_evaluator | Random Forest — F1=0.8063 ROC-AUC=0.9711 PR-AUC=0.8033
+2026-09-22 00:31:12 | INFO     | core.model_evaluator | Gradient Boosting — F1=0.7273 ROC-AUC=0.9418 PR-AUC=0.7778
+2026-09-22 00:31:12 | INFO     | database.db_manager | Saved 4 metric rows to model_metrics
+2026-09-22 00:33:11 | INFO     | core.anomaly_detector | Anomaly detection complete: 14674 anomalies
+2026-09-22 00:35:18 | INFO     | controllers.app_controller | Export requested: clean_csv
+2026-09-22 00:35:28 | INFO     | core.exporter | Exported CSV: C:\Users\kblch\Desktop\blackledger\exports\clean_dataset.csv
+2026-09-22 00:35:33 | INFO     | controllers.app_controller | Export requested: pred_csv
+2026-09-22 00:35:43 | INFO     | controllers.app_controller | Export requested: risk_csv
+2026-09-22 00:35:46 | INFO     | controllers.app_controller | Export requested: anomaly_csv
+2026-09-22 00:35:47 | INFO     | core.exporter | Exported CSV: C:\Users\kblch\Desktop\blackledger\exports\anomalies.csv
+2026-09-22 00:35:52 | INFO     | controllers.app_controller | Export requested: metrics_json
+2026-09-22 00:35:52 | INFO     | core.exporter | Exported JSON: C:\Users\kblch\Desktop\blackledger\exports\model_metrics.json
+2026-09-22 00:35:56 | INFO     | controllers.app_controller | Export requested: charts_png
+2026-09-22 00:35:58 | INFO     | controllers.app_controller | Export requested: summary
+2026-09-22 00:35:59 | INFO     | core.exporter | Exported CSV: C:\Users\kblch\Desktop\blackledger\exports\summary_describe.csv
+2026-09-22 00:35:59 | INFO     | core.exporter | Exported JSON: C:\Users\kblch\Desktop\blackledger\exports\summary_describe.json
+2026-09-22 00:39:28 | INFO     | blackledger.main | Starting BLACKLEDGER …
+2026-09-22 00:39:28 | INFO     | database.db_manager | Database schema initialised at C:\Users\kblch\Desktop\blackledger\blackledger.db
+2026-09-22 00:39:28 | INFO     | blackledger.main | BLACKLEDGER ready.
+2026-09-22 00:39:51 | INFO     | core.data_loader | Loading CSV: C:\Users\kblch\Downloads\archive (3)\creditcard.csv
+2026-09-22 00:39:53 | INFO     | core.data_loader | Loaded shape=(284807, 31)
+2026-09-22 00:39:55 | INFO     | core.data_validator | Validation complete: 0 issues, 2 warnings
+2026-09-22 00:39:55 | INFO     | core.data_cleaner | Dropped 1081 duplicates
+2026-09-22 00:39:56 | INFO     | core.data_cleaner | Cleaning complete: (284807, 31) → (283726, 31)
+2026-09-22 00:39:56 | INFO     | controllers.app_controller | Cleaned shape: (283726, 31)
+2026-09-22 00:39:56 | INFO     | core.feature_engineer | Engineered 3 features: ['amount_log', 'amount_percentile', 'is_round_amount']
+2026-09-22 00:40:26 | INFO     | controllers.app_controller | Training on 35 features: ['Time', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8', 'V9', 'V10', 'V11', 'V12', 'V13', 'V14', 'V15', 'V16', 'V17', 'V18', 'V19', 'V20', 'V21', 'V22', 'V23', 'V24', 'V25', 'V26', 'V27', 'V28', 'Amount', 'amount_log', 'amount_percentile', 'is_round_amount', 'day', 'hour_bucket']
+2026-09-22 00:40:26 | INFO     | core.imbalance_handler | Split: train=226980 test=56746
+2026-09-22 00:40:27 | INFO     | core.imbalance_handler | Resampled train: {0: 226602, 1: 378} → {0: 226602, 1: 226602}
+2026-09-22 00:40:27 | INFO     | core.model_trainer | Training Logistic Regression …
+2026-09-22 00:40:28 | INFO     | core.model_trainer | Saved Logistic Regression
+2026-09-22 00:40:28 | INFO     | core.model_trainer | Training Decision Tree …
+2026-09-22 00:40:43 | INFO     | core.model_trainer | Saved Decision Tree
+2026-09-22 00:40:43 | INFO     | core.model_trainer | Training Random Forest …
+2026-09-22 00:43:58 | INFO     | core.model_trainer | Saved Random Forest
+2026-09-22 00:43:58 | INFO     | core.model_trainer | Training Gradient Boosting …
+2026-09-22 01:10:56 | INFO     | core.model_trainer | Saved Gradient Boosting
+2026-09-22 01:10:56 | INFO     | core.model_evaluator | Logistic Regression — F1=0.2387 ROC-AUC=0.9576 PR-AUC=0.6908
+2026-09-22 01:10:56 | INFO     | core.model_evaluator | Decision Tree — F1=0.1548 ROC-AUC=0.9088 PR-AUC=0.4044
+2026-09-22 01:10:56 | INFO     | core.model_evaluator | Random Forest — F1=0.8063 ROC-AUC=0.9711 PR-AUC=0.8033
+2026-09-22 01:10:57 | INFO     | core.model_evaluator | Gradient Boosting — F1=0.7273 ROC-AUC=0.9418 PR-AUC=0.7778
+2026-09-22 01:10:57 | INFO     | database.db_manager | Saved 4 metric rows to model_metrics
+2026-09-22 01:11:39 | INFO     | core.anomaly_detector | Anomaly detection complete: 14916 anomalies
+2026-09-22 01:11:50 | INFO     | core.anomaly_detector | Anomaly detection complete: 14916 anomalies
+2026-09-22 01:12:02 | INFO     | controllers.app_controller | Scoring investigations with Gradient Boosting
+2026-09-22 01:12:03 | INFO     | controllers.app_controller | Investigation loaded: 464 high-risk transactions
+2026-09-22 01:13:44 | INFO     | controllers.app_controller | Export requested: clean_csv
+2026-09-22 01:13:54 | INFO     | core.exporter | Exported CSV: C:\Users\kblch\Desktop\blackledger\exports\clean_dataset.csv
+2026-09-22 01:13:54 | INFO     | controllers.app_controller | Export requested: pred_csv
+2026-09-22 01:14:06 | INFO     | core.exporter | Exported CSV: C:\Users\kblch\Desktop\blackledger\exports\predictions.csv
+2026-09-22 01:14:06 | INFO     | controllers.app_controller | Export requested: pred_csv
+2026-09-22 01:14:17 | INFO     | core.exporter | Exported CSV: C:\Users\kblch\Desktop\blackledger\exports\predictions.csv
+2026-09-22 01:14:17 | INFO     | controllers.app_controller | Export requested: pred_csv
+2026-09-22 01:14:29 | INFO     | core.exporter | Exported CSV: C:\Users\kblch\Desktop\blackledger\exports\predictions.csv
+2026-09-22 01:14:29 | INFO     | controllers.app_controller | Export requested: risk_csv
+2026-09-22 01:14:31 | INFO     | core.exporter | Exported CSV: C:\Users\kblch\Desktop\blackledger\exports\risk_scores.csv
+2026-09-22 01:14:34 | INFO     | controllers.app_controller | Export requested: anomaly_csv
+2026-09-22 01:14:35 | INFO     | core.exporter | Exported CSV: C:\Users\kblch\Desktop\blackledger\exports\anomalies.csv
+2026-09-22 01:14:44 | INFO     | controllers.app_controller | Export requested: metrics_json
+2026-09-22 01:14:44 | INFO     | core.exporter | Exported JSON: C:\Users\kblch\Desktop\blackledger\exports\model_metrics.json
+2026-09-22 01:14:52 | INFO     | controllers.app_controller | Export requested: charts_png
+2026-09-22 01:15:09 | INFO     | controllers.app_controller | Export requested: summary
+2026-09-22 01:15:09 | INFO     | core.exporter | Exported CSV: C:\Users\kblch\Desktop\blackledger\exports\summary_describe.csv
+2026-09-22 01:15:09 | INFO     | core.exporter | Exported JSON: C:\Users\kblch\Desktop\blackledger\exports\summary_describe.json
